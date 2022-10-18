@@ -1,0 +1,1 @@
+This project focuses on learning, training and development on certain technologies.
