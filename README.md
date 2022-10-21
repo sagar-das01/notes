@@ -1,0 +1,1 @@
+This project is to create notes related to coding and different technology stacks 🖥️
