@@ -81,7 +81,8 @@
                         <li>core.logallrefupdate=true??</li>
                     </ul>
                     <p>Use git command <code>$ git config --list </code> to check the above settings on the terminal</p>
-             <h1>Git settings</h1>
+                    
+            <h1>Git settings</h1>
                 <p>Git command to check all the git settings</p>
                     <code>$ git config --list</code>
                 <p>Git has 3 levels of settings</p> 
@@ -91,7 +92,14 @@
                         <li>--system : System settings for every user of the computer</li>
                     </ol>                
                 <p>Each level has more control over the other. Hierarchically, <code>system > global > local </code></p>
-                
+                <h3>Global Settings</h3>
+                <p>Out of all the settings mentioned in the git files section, 3 of them can be set globally.</p>
+                <p>git config command with the global flag lists them-</p>
+                <code>$ git config --global --list</code>
+                <code>user.email=.....</code>
+                <code>user.name=.....</code>
+                <code>core.editor=.....</code>
+
         </section>  
     </div>
     
