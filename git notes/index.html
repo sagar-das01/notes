@@ -12,32 +12,74 @@
     <div>
         <section>
             <h1>Basic Git Operations</h1>
+            
             <h2>>> git init</h2>
-                <p> This command initializes a .git file inside the directory where this command is called. </p>
+            <p> This command initializes a .git file inside the directory where this command is called. </p>
+            
             <h2>>> git add [fileName] </h2>
-                <p> This command adds the file, to which some changes have been made to the staging area. </p>
-                <p><i>Note:</i> If changes are made to multiple files, to add all the changes to the staging area, replace the "[fileName]" with "." .</p>
-                <b>command :-  >> git add .</b>
+            <p> This command adds the file, to which some changes have been made to the staging area. </p>
+            <p><i>Note:</i> If changes are made to multiple files, to add all the changes to the staging area, replace the "[fileName]" with "." .</p>
+            <b>command :-  >> git add .</b>
+            
             <h2>>> git commit</h2>
-                <p>Whatever changes we make to the project, it must be recorded with certain information. We commit this information using the git commit command.</p>
-                <p> Example :-  <br>>> git commit -m "Adding the readme file."</br></p>
-                <h3> The commit structure</h3>
-                    <p> Git commit have three parts - </p>
-                    <ul>
-                        <li>The commit</li>
-                            <template> The commit contains all the metadata (the author, the commit message and type of the commit) </template>
-                        <li>Tree</li>
-                            <template> Tree tracks the names and locations in the repository. </template>
-                        <li>Blob</li>
-                            <template>
-                                <p>BLOB - Binary Large OBject. </p>
-                                <p>The BLOB may contain any kind of data. </p>
-                                <p>During the commit BLOB stores a compressed snapshot the contents of the file.</p>
-                            </template>
-                    </ul>
+            <p>Whatever changes we make to the project, it must be recorded with certain information. We commit this information using the git commit command.</p>
+            <p> Example :-  <br>>> git commit -m "Adding the readme file."</br></p>
+            
+            <h3> The commit structure</h3>
+            <p> Git commit have three parts - </p>
+            <ul>
+                <li>The commit</li>
+                <template>
+                    The commit contains all the metadata (the author, the commit message and type of the commit)
+                </template>
+                <li>Tree</li>
+                <template>
+                    Tree tracks the names and locations in the repository.
+                </template>
+                <li>Blob</li>
+                <template>
+                    <p>BLOB - Binary Large OBject. </p>
+                    <p>The BLOB may contain any kind of data. </p>
+                    <p>During the commit BLOB stores a compressed snapshot the contents of the file.</p>
+                </template>
+            </ul>
+
 
             <h2>>> git log</h2>
-                <p> This command shows all the changes made to the repository in the chronological order.</p>
+            <p> This command shows all the changes made to the repository in the chronological order.</p>
+
+            <h1>git files</h1>
+                <p>There are two hidden git files which include very important information.</p>
+                   <ul>
+                       <li>.gitignore</li>
+                       <li>.gitconfig</li>
+                   </ul>
+                <code>.gitignore</code>
+                    <p>We can mention certain file names and file extensions in this .gitignore file for git to ignore</p>
+                    <p><b>Example :-</b></p>
+                    <p>Let's assume the .gitignore file includes contents as mentioned below-</p>                        
+                        <code>
+                            *.vs
+                            *.scala
+                            gmg.ixt
+                            nfh.*
+                        </code>    
+                       <p>This will ask git to ignore all the file with the following extensions, .vs and .scala</p>
+                       <p>Git will specifically ignore the file named "gmg.ixt"</p>
+                       <p>Git will also ignore any file named "nfh" with any extensions.</p>
+                <code>.gitconfig</code>
+                    <p>The .gitconfig file includes valuable config information which can be set in this file for ease of the development process</p>
+                    <p>Following are the list of configurations which can be set for ease of development</p>
+                    <ul>
+                        <li>user.email=someEmail@email.com</li>
+                        <li>user.name=some_username</li>
+                        <li>core.editor=suitable_code_editor[nano, vim, vscode]</li>
+                        <li>core.repositoryformatversion={version_number}</li>
+                        <li>core.filemode=true??</li>
+                        <li>core.bare=false??</li>
+                        <li>core.logallrefupdate=true??</li>
+                    </ul>
+                
         </section>  
     </div>
     
