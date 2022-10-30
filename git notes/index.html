@@ -23,7 +23,7 @@
             
             <h2>>> git commit</h2>
             <p>Whatever changes we make to the project, it must be recorded with certain information. We commit this information using the git commit command.</p>
-            <p> Example :-  <br>>> git commit -m "Adding the readme file."</br></p>
+            <p> Example :-  <b>>> git commit -m "Adding the readme file."</b></p>
             
             <h3> The commit structure</h3>
             <p> Git commit have three parts - </p>
@@ -69,7 +69,8 @@
                        <p>Git will also ignore any file named "nfh" with any extensions.</p>
                 <code>.gitconfig</code>
                     <p>The .gitconfig file includes valuable config information which can be set in this file for ease of the development process</p>
-                    <p>Following are the list of configurations which can be set for ease of development</p>
+                    <p>Following are the list of configurations which can be set inside the .gitconfig file for ease of development</p>
+                    
                     <ul>
                         <li>user.email=someEmail@email.com</li>
                         <li>user.name=some_username</li>
@@ -79,6 +80,17 @@
                         <li>core.bare=false??</li>
                         <li>core.logallrefupdate=true??</li>
                     </ul>
+                    <p>Use git command <code>$ git config --list </code> to check the above settings on the terminal</p>
+             <h1>Git settings</h1>
+                <p>Git command to check all the git settings</p>
+                    <code>$ git config --list</code>
+                <p>Git has 3 levels of settings</p> 
+                    <ol>
+                        <li>--local : Setting for a specific project</li>
+                        <li>--global : Settings for all of the projects</li>
+                        <li>--system : System settings for every user of the computer</li>
+                    </ol>                
+                <p>Each level has more control over the other. Hierarchically, <code>system > global > local </code></p>
                 
         </section>  
     </div>
