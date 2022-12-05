@@ -5,7 +5,7 @@ Creating Your Kubernetes Cluster
 3. Configure pod networking.
 4. Join the nodes to your cluster.  
 
-![building your cluster](/images/building_your_cluster.jpg)
+![building your cluster](images/building_your_cluster.jpg)
 
 
 Required Packages
