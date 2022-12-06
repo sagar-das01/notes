@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kubernetes Notes</title>
+    <link rel="styesheet" href="styles.css">
+    <script src="source.js"></script>
+</head>
+<body onload="defaultTabs()">
+    <div>
+        <h1>Building A Cluster</h1>
+            <p> Steps</p>
+            <ol>
+                <li>Building a cluster requires installing all the Runtime and Kubernetes configuration packages.</li>
+                <li>Then create the cluster.</li>
+                <li>Configure Pod Networking.</li>
+                <li>Join Nodes to your cluster.</li>
+            </ol>
+            <img src="images/building_your_cluster.jpg" title="building your cluster">
+
+        <h1>Required Packages</h1>
+            <p>Following are the required packages to build a cluster</1p>
+                <ul>
+                    <li>containerd or docker</li>
+                    <li>kubelet</li>
+                    <li>kubeadm</li>
+                    <li>kubectl</li>
+                </ul>
+            
+            <p> These are the 4 components which must be installed in all the nodes regardless of the control plane node or the cluster node.</p>
+            
+            <h2>Containerd/Docker</h2>
+                <p>This is the container runtime environment</p>
+            
+            <h2>Kubelets</h2>
+                <p>Kubelet is the component which drive the individual nodes in the cluster</p>
+            <h2>Kubeadm[Kubeadmin]</h2>
+                <p>Kubeadm bootstraps the cluster, i.e. it makes the cluster components up and running.</p>
+                <p>This is also responsible for adding new nodes to the cluster.</p>    
+            <h2>kubectl[Kube Control]</h2>
+                <p>This is the primary command line tool to adminsiter all the workload in the cluster.</p>    
+    
+            
+        <h1>Steps to get and install Kubernetes on Ubuntu</h1>
+        <p>Following are the steps to install Kubernetes on any Virtual Machine, Windows or Linux</p>
+        <div class="tabs">
+            <button class="tablinks" onclick="openConfig(event,'vm')" id ="defaultTab">Virtual Machine(Linux)</button>
+            <button class="tablinks" onclick="openConfig(event,'windows')">Windows</button>
+            <button class="tablinks" onclick="openConfig(event,'linux')">Linux(Ubuntu)</button>
+        </div>
+
+        <div id="vm" class="tabcontents">
+            <h3>VM Installation</h3>
+            <ol>
+                <li>install containerd</li>
+                    <code>sudo apt-get install -y containerd</code>\
+                <li>add the gpg key</li>
+                    <code>curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -</code>
+                <li>adding kubernetes to the source list</li>
+                    <code>cat <<EOF >/etc/apt/sources.list.d/kubernetes.list</code>
+                    <code>deb https://apt.kubernetes.io/ kubernetes-xenial main</code>
+                <li>update linux to add the changes and install any necessary dependencies</li>
+                    <code>sudo apt get update</code>
+                <li>install kubelet, kubeadm and kubectl</li>
+                    <code>apt-get install -y kubelet kubeadm kubectl</code>
+                <li>Configure the packages to prevent auto upgrade </li>
+                    <code>apt-mark hold kubelet kubeadm kubectl containerd</code>
+                    <p><code>apt-mark</code> sets the settings for the package</p>
+                    <p><code>hold</code>holds back the package(s) and saves it from any auto upgrade</p>
+            </ol>
+        </div>
+
+        <div id="windows" class="tabcontents">
+            <h3>Windows Installation</h3>
+            <p>To be updated</p>
+        </div>
+
+        <div id="linux" class="tabcontents">
+            <h3>Linux Ubuntu Installation</h3>
+            <p>To be updated</p>
+
+        </div>
+
+
+    
+</body>
+</html>
